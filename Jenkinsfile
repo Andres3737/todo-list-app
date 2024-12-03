@@ -10,7 +10,7 @@ pipeline {
 
         stage ('Docker build'){
             steps {
-                sh 'docker build -t abm-lista .'
+                sh 'docker-compose up --build -d'
             }
         }
     }
