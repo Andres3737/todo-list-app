@@ -7,6 +7,12 @@ pipeline {
                 sh 'docker info'
             }
         }
+
+        stage ('Docker build'){
+            steps {
+                sh 'docker-compose up -d . '
+            }
+        }
     }
 
 }
