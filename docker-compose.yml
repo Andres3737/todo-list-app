@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   lista:
     build:
@@ -19,3 +21,5 @@ services:
       - MYSQL_PASSWORD=list_secret
     volumes:
       - mariadb_data:/var/lib/mysql
+volumes:
+  mariadb_data:
