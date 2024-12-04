@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage ('verificar docker-compose'){
+            steps {
+                sh 'cat docker-compose.yml'
+            }
+        }
+
         stage ('Docker build'){
             steps {
                 sh 'docker-compose up --build -d'
