@@ -21,4 +21,17 @@ pipeline {
         }
     }
 
+    post {
+        success {
+            slackSend(channel: '#jenkins', message: 'Todo bien')
+
+        }
+
+        failure {
+            slackSend(channel: '#jenkins', message: 'Algo anda mal')
+
+
+        }
+    }
+
 }
